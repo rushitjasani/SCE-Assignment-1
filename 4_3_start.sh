@@ -13,6 +13,11 @@ then
 	rm ~/openvpn/ubuntu.ovpn
 fi
 wget -q https://vpn.iiit.ac.in/secure/ubuntu.ovpn --http-user $uname --http-password $password -P ~/openvpn/
+if [ $? -ne 0 ]
+then
+    echo "some Error occured :("
+    exit 1
+fi
 
 command -v openvpn &> /dev/null
 if [ $? -ne 0 ]
@@ -21,6 +26,9 @@ then
 fi
 
 sudo openvpn --config ~/openvpn/ubuntu.ovpn --auth-user-pass ~/openvpn/.sec_data.txt --daemon
+
+sleep 5
+ifconfig | grep -q "tun"
 
 if [ $? -eq 0 ]
 then
