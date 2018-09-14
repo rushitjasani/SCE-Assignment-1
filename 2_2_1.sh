@@ -1,0 +1,1 @@
+sed -n '/Anycity/ s/,.*//p' address-book.csv

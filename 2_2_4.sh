@@ -1,0 +1,1 @@
+sed -e 's/[[:punct:]]/*/g' -e 's/[[:digit:]]/?/g' address-book.csv

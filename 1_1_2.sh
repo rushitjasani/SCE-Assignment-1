@@ -1,0 +1,1 @@
+grep -icE '^[aeiou]' /usr/share/dict/words

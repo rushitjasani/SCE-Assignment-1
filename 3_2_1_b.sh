@@ -1,0 +1,1 @@
+awk 'NR>1 && NR<5 {print $1,$2,$5} ' marks.txt

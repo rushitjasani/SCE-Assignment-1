@@ -1,0 +1,1 @@
+sed -nE '/[[:punct:]]/p' /usr/share/dict/words

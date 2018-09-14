@@ -1,0 +1,1 @@
+sed -nE '/^[aeiou]/Ip' /usr/share/dict/words | wc -l

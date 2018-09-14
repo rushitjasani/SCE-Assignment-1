@@ -1,0 +1,1 @@
+ls -l | sed -nE '/^d/p' | wc -l

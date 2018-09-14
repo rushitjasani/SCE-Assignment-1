@@ -1,0 +1,1 @@
+ sed -nE '/india|africa/Ip' /usr/share/dict/words

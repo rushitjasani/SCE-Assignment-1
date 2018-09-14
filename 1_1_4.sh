@@ -1,0 +1,1 @@
+grep -iE '.*aa.*' /usr/share/dict/words

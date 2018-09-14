@@ -1,0 +1,1 @@
+sed -nE '/^[aeiou].*[aeiou]$/Ip' /usr/share/dict/words
