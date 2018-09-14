@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sudo -v
 read -p "Enter Username(example@students.iiit.ac.in): " uname
 read -sp "Password: " password
 
@@ -19,4 +20,12 @@ then
     sudo apt install openvpn
 fi
 
-sudo -b openvpn --config ~/openvpn/ubuntu.ovpn --auth-user-pass ~/openvpn/.sec_data.txt &> /dev/null
+sudo openvpn --config ~/openvpn/ubuntu.ovpn --auth-user-pass ~/openvpn/.sec_data.txt --daemon
+
+if [ $? -eq 0 ]
+then
+    sudo sed -i '1s/^/nameserver 10.4.20.204\n/' /etc/resolv.conf
+    echo -e '\nVpn Started (^_^)'
+else 
+    echo -e '\nSome Error occured..try again later :('
+fi
