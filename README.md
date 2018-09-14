@@ -1,1 +1,6 @@
-# Bash-Assignment-1
+GREP
+SED
+AWK
+Bash
+
+read pdf for more details.
