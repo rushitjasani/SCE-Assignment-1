@@ -17,7 +17,7 @@ d=6
 col=$(($RANDOM % 7 ))
 tput clear
 tput cup $x $y
-# tput setab 7
+tput setab 7
 tput clear 
 while [ 1 -eq 1 ]
 do
